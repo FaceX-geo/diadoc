@@ -1,0 +1,11 @@
+#!/bin/sh
+set -eu
+project_dir=$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)
+if [ -x "$project_dir/.venv/bin/python" ]; then
+  exec "$project_dir/.venv/bin/python" "$@"
+fi
+runtime_python="$HOME/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3"
+if [ -x "$runtime_python" ]; then
+  exec "$runtime_python" "$@"
+fi
+exec python3 "$@"

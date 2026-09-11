@@ -1,0 +1,16 @@
+samples/
+archive/
+__pycache__/
+.pytest_cache/
+.venv/
+.DS_Store
+.env
+.env.*
+*.log
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+dd-batch-*.json
+dd-index-*.json
+*.capture.json
+Diadoc.Documents.*
